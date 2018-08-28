@@ -8,6 +8,7 @@ import NewDetail from './components/News/NewDetail.vue'
 import PhotoList from './components/photos/PhontoList.vue'
 import PhotoDetail from './components/photos/PhotoDetail.vue'
 import GoodsList from './components/Goods/GoodsList.vue'
+import GoodDetal from './components/Goods/goodDetail.vue'
 
 var router = new VueRouter({
   routes: [
@@ -38,6 +39,10 @@ var router = new VueRouter({
     }, {
       path: '/home/goodslist',
       component: GoodsList
+    }, {
+      path: '/home/gooddetal',
+      component: GoodDetal,
+      name: 'gooddetail'
     },
     {
       path:'*',

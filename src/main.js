@@ -1,6 +1,7 @@
 import Vue  from 'vue'
 import App from './App.vue'
 import router from './router.js'
+import Vuex from 'vuex'
 import {
   Header,
   Swipe,
@@ -25,14 +26,30 @@ Vue.use(VueRouter)
 Vue.use(VueResource)
 Vue.use(Lazyload)
 Vue.use(VuePreview)
+Vue.use(Vuex)
 
 Vue.http.options.root = '192.168.7.13'
 
+var store = new Vuex.Store({
+  state:{
+    count:0
+  },
+  mutations:{
+    add(state) {
+      console.log('vvvvvvvvvvvvvvvv', state)
+      state.count++;
+    }
+  },
+  getters:{
+
+  }
+})
 
 console.log('hello mrj')
 
 new Vue({
    el:'#app',
+   store,
    router,
    render: h=>h(App)
 })

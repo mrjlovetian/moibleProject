@@ -1,6 +1,6 @@
 <template>
   <div class="mainlist">
-    <div class="goods">
+    <div class="goods" @click="goDetail(100)">
       <img src="https://img10.360buyimg.com/n7/jfs/t18157/222/1822300674/231514/6c179af8/5ad87390N086a3c91.jpg">
       <h3>荣耀10 GT游戏加速 AIS手持夜景 6GB+64GB 幻影蓝全网通 移动联通电信</h3>
       <div class="bottominfo">
@@ -15,7 +15,7 @@
       </div>
     </div>
 
-    <div class="goods">
+    <div class="goods" @click="goDetail(200)">
       <img src="https://img10.360buyimg.com/n7/jfs/t18157/222/1822300674/231514/6c179af8/5ad87390N086a3c91.jpg">
       <h3>荣耀10 GT游戏加速</h3>
       <div class="bottominfo">
@@ -30,7 +30,7 @@
       </div>
     </div>
 
-    <div class="goods">
+    <div class="goods" @click="goDetail(700)">
       <img src="https://img10.360buyimg.com/n7/jfs/t18157/222/1822300674/231514/6c179af8/5ad87390N086a3c91.jpg">
       <h3>荣耀10 GT游戏加速 AIS手持夜景 6GB+64GB 幻影蓝全网通 移动联通电信</h3>
       <div class="bottominfo">
@@ -46,6 +46,20 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data(){
+    return {}
+  },
+  methods:{
+    goDetail(numbe){
+      this.$router.push({name:'gooddetail'})
+    }
+  }
+}
+</script>
+
 
 <style lang="scss">
 

@@ -44,7 +44,7 @@ export default {
   },
   methods:{
     getList(){
-      this.$http.get("http://127.0.0.1/lunbotu.json").then(result=>{
+      this.$http.get("lunbotu.json").then(result=>{
         console.log('aaaaaaa', result.data)
         this.listdata = result.data
       }).then(error=>{

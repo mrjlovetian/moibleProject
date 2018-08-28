@@ -1,3 +1,3 @@
 <template>
-  <h1>购物车</h1>
+  <h1>购物车 {{$store.state.count}} </h1>
 </template>
